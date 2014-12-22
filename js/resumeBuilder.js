@@ -98,16 +98,6 @@ $("#header").append(HTMLbioPic);
 HTMLWelcomeMsg= HTMLWelcomeMsg.replace("%data%",bio.welcomeMessage);
 $("#header").append(HTMLWelcomeMsg);
 
-//Set groundwork for HTML skills list- generate enclosing <ul> tags
-$("#header").append(HTMLskillsStart);
-
-//generate a list of skill items
-for (var index=0; index< bio.skills.length; ++index)
-{
-	var HTMLnextSkill= HTMLskills.replace("%data%",bio.skills[index]);
-	$("#skills").append(HTMLnextSkill);    //adding next skill
-}
-
 //	"education" object/
 var education={
 	"schools":
@@ -241,11 +231,8 @@ var education={
 */	]
 }
 
-$("#workExperience").append(HTMLworkStart);		//new division class="work-entry"
-$(".work-entry").append(work["job_position"]);	//
-
 $("#education").append(HTMLschoolStart);    // Add a new <div> "education-entry"
-$(".education-entry").append(education["name"]);
+$(".education-entry").append(education["schools"]);
 
 
 console.log(work);
