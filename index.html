@@ -115,6 +115,15 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
         }
     } //skills added
 
+    //adding jobs one by one
+    for (jobIndex in work.jobs)
+    {
+      $("#workExperience").append(HTMLworkStart);   //new <div> entry into html
+      var HTMLworkEmployerData= HTMLworkEmployer.replace("%data%",work.jobs[jobIndex].employer);
+      var HTMLworkTitleData= HTMLworkTitle.replace("%data%",work.jobs[jobIndex].title);
+      $(".work-entry:last").append(HTMLworkEmployerData+HTMLworkTitleData);
+    }
+
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('topContacts').style.backgroundColor= "black";
     }
