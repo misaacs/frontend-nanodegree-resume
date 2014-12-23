@@ -115,15 +115,22 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
         }
     } //skills added
 
+  var displayWork= function(){      //or function displayWork(){}
     //adding jobs one by one
     for (jobIndex in work.jobs)
     {
+
       $("#workExperience").append(HTMLworkStart);   //new <div> entry into html
       var HTMLworkEmployerData= HTMLworkEmployer.replace("%data%",work.jobs[jobIndex].employer);
       var HTMLworkTitleData= HTMLworkTitle.replace("%data%",work.jobs[jobIndex].title);
       $(".work-entry:last").append(HTMLworkEmployerData+HTMLworkTitleData);
+      var HTMLworkDatesData= HTMLworkDates.replace("%data%",work.jobs[jobIndex].dates_worked);
+      $(".work-entry:last").append(HTMLworkDatesData);
+      var HTMLworkDescriptionData= HTMLworkDescription.replace("%data%",work.jobs[jobIndex].description);
+      $(".work-entry:last").append(HTMLworkDescriptionData);
     }
-
+  }
+  displayWork();
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('topContacts').style.backgroundColor= "black";
     }

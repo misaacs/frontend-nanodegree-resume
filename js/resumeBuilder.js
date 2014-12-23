@@ -14,14 +14,14 @@ var work= {
 			"title": "Photographer, Owner",
 			"location": "Seattle WA, Portland OR",
 			"dates_worked": "2006-2013",
-			"description":""	
+			"description":"Business Portraits, Weddings, Art Photography"	
 		},
 		{
 			"employer": "Self-Employed",
 			"title": "Writer",
 			"location": "Phoenix AZ, Seattle WA",
 			"dates_worked": "2003-2008",
-			"description":"Literature, Fiction"	
+			"description":"Short-form fiction and a novel"	
 		},
 		{
 			"employer": "Department of Computer Science, UC Santa Barbara",

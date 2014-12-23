@@ -25,5 +25,19 @@ function nameChanger(oldName) {
     return finalName;
 };
 
+function locationizer(myWork) {
+    var myArr=[];
+    for(var jobIndex in myWork.jobs)
+    {
+        var nextLocation= myWork.jobs[jobIndex].location;
+        if(myArr.indexOf(nextLocation)==-1){
+            myArr.push(nextLocation);
+        }
+            
+    }
+    return myArr;
+}
+
+
 // Did your code work? The line below will tell you!
 console.log(nameChanger(name));
