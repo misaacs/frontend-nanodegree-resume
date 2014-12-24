@@ -62,9 +62,19 @@ var googleMap = '<div id="map"></div>';
 /*
 The International Name challenge in Lesson 2 where you'll create a function that will need this helper code to run. Don't delete! It hooks up your code to the button you'll be appending.
 */
+function capitalize(inString){
+  return inString.charAt(0).toUpperCase()+inString.slice(1).toLowerCase();
+}
+
+function inName(inNameo)
+{
+  var splitName= inNameo.trim().split(" ");  //returns each name in an array
+  return capitalize(splitName[0])+" "+splitName[1].toUpperCase();
+}
+
 $(document).ready(function() {
-  $('button').click(function() {
-    var iName = inName(name) || function(){};
+  $('button').click(function(loc) {
+    var iName = inName(bio.name) || function(){};
     $('#name').html(iName);  
   });
 });
@@ -88,8 +98,6 @@ $(document).click(function(loc) {
   // your code goes here!
   logClicks(loc.pageX,loc.pageY);
 });
-
-
 
 /*
 This is the fun part. Here's where we generate the custom Google Map for the website.

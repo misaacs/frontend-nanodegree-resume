@@ -37,18 +37,32 @@ var projects={
 	"projects":
 	[
 		{
-			"title":"",
-			"dates worked":"",
-			"description":"",
+			"title":"Proj1",
+			"dates worked":"November 2014-Present",
+			"description":"This and that",
 			"images":[]
 		},
 		{
-			"title":"",
-			"dates worked":"",
-			"description":"",
+			"title":"Project #2",
+			"dates worked":"2010-2014",
+			"description":"This and the other",
 			"images":[]
 		}
 	]
+}
+projects.display= function(){
+	for (var i=0;i<projects.projects.length;++i){
+		$("#projects").append(HTMLprojectStart);	//new project-entry <div>
+	
+		var title= HTMLprojectTitle.replace("%data%",projects.projects[i].title);
+		var dates= HTMLprojectDates.replace("%data%",projects.projects[i]["dates worked"]);
+		var description= HTMLprojectDescription.replace("%data%",projects.projects[i].description);
+//add images here	
+		//add information to he current project entry <div>
+		$(".project-entry:last").append(title);
+		$(".project-entry:last").append(dates);
+		$(".project-entry:last").append(description);			
+	}
 }
 
 var bio={
