@@ -247,7 +247,6 @@ var education={
 
 $("#education").append(HTMLschoolStart);    // Add a new <div> "education-entry"
 $(".education-entry").append(education["schools"]);
-$("mapDiv").append(googleMap);
 
 console.log(work);
 console.log(education);
